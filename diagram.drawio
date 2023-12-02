@@ -1,0 +1,36 @@
+<mxfile host="65bd71144e">
+    <diagram id="q3GHa5FDCBVNJ26OGZ3h" name="Page-1">
+        <mxGraphModel dx="475" dy="389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" value="Aluno" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;glass=0;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="60" width="150" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="- nome: String&#10;- idade: int&#10;- ativo: boolean&#10;- matrícula: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;glass=0;sketch=0;" parent="9" vertex="1">
+                    <mxGeometry y="26" width="150" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=0;shadow=0;glass=0;sketch=0;" parent="9" vertex="1">
+                    <mxGeometry y="90" width="150" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="+ setNome(String): void&#10;+ getNome(void):String&#10;+ setIdade(int):void&#10;+ getIdade(void):int&#10;+ setAtivo(boolean):void&#10;+ getAtivo(void):boolean&#10;+ setMatricula(int):void&#10;+ getMatricula(void):int&#10;+ toString(void):String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;glass=0;sketch=0;" parent="9" vertex="1">
+                    <mxGeometry y="98" width="150" height="142" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Professor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;glass=0;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="60" width="160" height="240" as="geometry">
+                        <mxRectangle x="300" y="60" width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="- nome: String&#10;- idade:int&#10;- idiomas:arrayList&#10;- id:int&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;glass=0;sketch=0;" parent="13" vertex="1">
+                    <mxGeometry y="26" width="160" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=0;shadow=0;glass=0;sketch=0;" parent="13" vertex="1">
+                    <mxGeometry y="90" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="+ setNome(String): void&#10;+ getNome(void): String&#10;+ setIdade(int):void&#10;+ getIdade(void):int&#10;+ setIdiomas(String):void&#10;+ getIdiomas(void):Arraylist&#10;+ setId(int):void&#10;+ getId(void):int&#10;+ toString(void):String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;glass=0;sketch=0;" parent="13" vertex="1">
+                    <mxGeometry y="98" width="160" height="142" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
