@@ -5,41 +5,60 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Boleto {
-    private String numero;
-    private double valor;
-    private String beneficiario;
-    private String dataVencimento;
+    private static int numeroBoletos = 0;
+    private int idBoleto;
+    private float valor;
+    private Aluno aluno;
+    private String vencimento;
+    private boolean pago;
 
-    public String getNumero() {
-        return numero;
+    public Boleto(float valor, Aluno aluno, String vencimento) {
+        this.idBoleto = (++numeroBoletos*102);
+        this.valor = valor;
+        this.aluno = aluno;
+        this.vencimento = vencimento;
+        this.pago = false;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setIdBoleto(int idBoleto) {
+        this.idBoleto = idBoleto;
+    }
+    
+    public int getIdBoleto() {
+        return this.idBoleto;
     }
 
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
+    public void setValor(float valor) {
         this.valor = valor;
     }
 
-    public String getBeneficiario() {
-        return beneficiario;
+    public float getValor() {
+        return this.valor;
     }
 
-    public void setBeneficiario(String beneficiario) {
-        this.beneficiario = beneficiario;
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 
-    public String getDataVencimento() {
-        return dataVencimento;
+    public Aluno getBeneficiario() {
+        return this.aluno;
     }
 
-    public void setDataVencimento(String dataVencimento) {
-        this.dataVencimento = dataVencimento;
+    public void setVencimento(String vencimento) {
+        this.vencimento = vencimento;
+    }
+
+    public String getVencimento() {
+        return this.vencimento;
+    }
+
+    public void setPago(boolean pago) {
+        this.pago = pago;
+    }
+
+    public boolean getPago() {
+        return this.pago;
     }
 
     public void gerarBoleto(String nomeArquivo, String numero, double valor, String beneficiario, String dataVencimento) {
@@ -60,8 +79,15 @@ public class Boleto {
             System.out.println("Erro desconhecido: " + e.getMessage());
         }
     }
-    
-    // Outros métodos relevantes para a classe Boleto
-    // ...
+
+    public String toString() {
+        return "Boleto{" +
+                "idBoleto=" + this.idBoleto +
+                ", valor=" + this.valor +
+                ", aluno=" + this.aluno +
+                ", vencimento='" + this.vencimento + '\'' +
+                ", pago=" + this.pago +
+                '}';
+    }
 }
 

@@ -1,68 +1,61 @@
 package classes;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Turma {
-    private String nome;
-    private int capacidade;
-    private String idioma;
-    private List<Aluno> alunos;
+    private static int numeroTurmas= 0;
+    private int codigoTurma;
+    private ArrayList<Aluno> alunos;
+    private ArrayList<Aula> aulas;
+    private int numeroAlunos;
 
-    public Turma(String nome, int capacidade, String idioma) {
-        this.nome = nome;
-        this.capacidade = capacidade;
-        this.idioma = idioma;
+    public Turma() {
+        numeroTurmas++;
+        this.codigoTurma = numeroTurmas*1001;
         this.alunos = new ArrayList<>();
-
+        this.aulas = new ArrayList<>();
+        this.numeroAlunos = 0;
     }
 
-
-    // Métodos getters e setters
-    public void adicionarAluno(Aluno aluno) {
-        alunos.add(aluno);
+    public void setCodigoTurma(int codigoTurma) {
+        this.codigoTurma = codigoTurma;
     }
 
-    public String getnome() {
-        return nome;
+    public int getCodigoTurma() {
+        return this.codigoTurma;
+    }
+
+    public void setAlunos(ArrayList<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    public ArrayList<Aluno> getAlunos() {
+        return this.alunos;
+    }
+
+    public void setAulas(ArrayList<Aula> aulas) {
+        this.aulas = aulas;
+    }
+
+    public ArrayList<Aula> getAulas() {
+        return this.aulas;
+    }
+
+    public void setNumeroAlunos(int numeroAlunos) {
+        this.numeroAlunos = numeroAlunos;
     }
     
-    public void setnome(String nome) {
-        this.nome = nome;
-    }
-    
-    public int getcapacidade() {
-        return capacidade;
-    }
-    
-    public void setCapacidade(int capacidade) {
-        this.capacidade = capacidade;
-    }
-
-    public String getidioma() {
-        return idioma;
-    }
-    
-    public void setidioma(String idioma) {
-        this.idioma = idioma;
-    }
-
-    public void imprimirAlunos() {
-        System.out.println("Alunos da turma " + nome + ":");
-        System.out.println("Capacidade da turma: " + capacidade);
-        System.out.println("Idioma da turma: " + idioma);
-        for (Aluno aluno : alunos) {
-            System.out.println(aluno);
-        }
+    public int getNumeroAlunos() {
+        return this.numeroAlunos;
     }
 
     public String toString() {
-        return "Nome: " + nome + ", Capacidade: " + capacidade + ", Idioma: " + idioma;
+        return "Turma{" +
+                "codigoTurma=" + this.codigoTurma +
+                ", alunos=" + this.alunos +
+                ", aulas=" + this.aulas +
+                '}';
     }
-    
-    // Outros métodos relevantes para a turma
-    // ...
-    
 }
 
     
